@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 import styles from './Layout.module.css';
 
-const Layout = ({ children, title = "Home" }) => {
+const Layout = ({ children, title = "Home", pageTitle = "Welcome" }) => {
     return (
         <>
             <Head>
@@ -11,7 +11,7 @@ const Layout = ({ children, title = "Home" }) => {
             <div className={styles.container}>
             <header className={styles.header}>
                 <h1>
-                    <span className={styles['header-title']}>MEC</span>
+                    <span className={styles['header-title']}>{pageTitle}</span>
                 </h1>
             </header>
             <main className={styles.main}>{children}</main>

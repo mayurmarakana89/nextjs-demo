@@ -1,0 +1,1 @@
+module.exports = {}; // to resolve . unexpected token while importing css files

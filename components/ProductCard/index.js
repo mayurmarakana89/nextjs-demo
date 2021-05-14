@@ -22,16 +22,19 @@ const useStyles = makeStyles({
   },
 });
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product = {} }) => {
+  if (!product) return <></>;
+
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} data-testid={`product-${product.name}`}>
         <CardContent>
             <div className={classes.media}>
                 <Image
                     width={200}
                     height={200}
+                    alt={product.name}
                     src={product.default_image_urls.main_image_url}
                 />
             </div>

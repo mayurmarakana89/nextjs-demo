@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCard matches snapshot 1`] = `
+<div
+  className="MuiPaper-root MuiCard-root makeStyles-root-1 MuiPaper-elevation1 MuiPaper-rounded"
+  data-testid="product-test product"
+>
+  <div
+    className="MuiCardContent-root"
+  >
+    <div
+      className="makeStyles-media-2"
+    >
+      <img
+        alt="alt-text"
+      />
+    </div>
+    <p
+      className="MuiTypography-root makeStyles-title-3 MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignCenter"
+    >
+      test product
+    </p>
+  </div>
+</div>
+`;

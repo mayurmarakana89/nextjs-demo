@@ -17,12 +17,13 @@ const useStyles = makeStyles({
   }
 });
 
-const ProductSelect = ({ products, onChange }) => {
+const ProductSelect = ({ products = [], onChange }) => {
   const classes = useStyles();
 
   return (
     <Autocomplete
       id="product-select"
+      data-testid={"product-select"}
       style={{ width: '100%' }}
       options={products}
       classes={{

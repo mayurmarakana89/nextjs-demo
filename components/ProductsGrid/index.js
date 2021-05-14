@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     }
 });
 
-const ProductsGrid = ({ products }) => {
+const ProductsGrid = ({ products = [] }) => {
   const classes = useStyles();
 
   return (

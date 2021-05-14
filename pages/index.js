@@ -21,7 +21,7 @@ const Home = ({ products }) => {
   };
 
   return (
-    <Layout title="MEC Products">
+    <Layout title="MEC" pageTitle="Product Search">
       <ProductSelect products={products} onChange={searchProducts}/>
       <br />
       {loading ?
