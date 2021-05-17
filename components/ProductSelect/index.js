@@ -1,40 +1,28 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import { makeStyles } from '@material-ui/core/styles';
 import Image from 'next/image'
-
-const useStyles = makeStyles({
-  option: {
-    fontSize: 15,
-    '& > span': {
-      marginRight: 10,
-      fontSize: 18,
-    },
-  },
-  padding20: {
-    paddingRight: 20
-  }
-});
+import styles from './ProductSelect.module.css';
 
 const ProductSelect = ({ products = [], onChange }) => {
-  const classes = useStyles();
+  const [inputValue, setInputValue] = React.useState('');
 
   return (
     <Autocomplete
       id="product-select"
       data-testid={"product-select"}
-      style={{ width: '100%' }}
-      options={products}
-      classes={{
-        option: classes.option,
+      freeSolo
+      
+      inputValue={inputValue}
+      onInputChange={(event, newInputValue) => {
+        setInputValue(newInputValue);
+        onChange(newInputValue);
       }}
-      onChange={(event) => onChange(event.currentTarget.innerText)}
-      autoHighlight
-      getOptionLabel={(option) => option.name}
-      renderOption={(option) => (
+      options={products}
+      getOptionLabel={(option) => option.name || inputValue}
+      renderOption={(option) =>
         <>
-          <span className={classes.padding20}>
+          <span className={styles.imageIcon}>
             <Image
               width={20}
               height={20}
@@ -42,15 +30,13 @@ const ProductSelect = ({ products = [], onChange }) => {
             />
           </span> {option.name}
         </>
-      )}
+      }
       renderInput={(params) => (
         <TextField
           {...params}
           label="I'm looking for"
+          margin="normal"
           variant="outlined"
-          inputProps={{
-            ...params.inputProps,
-          }}
         />
       )}
     />

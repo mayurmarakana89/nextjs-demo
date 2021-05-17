@@ -1,30 +1,29 @@
 import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
 
 import ProductCard from '../ProductCard';
 
-const useStyles = makeStyles({
-    root: {
-        flexGrow: 1,
-    }
-});
+import styles from './ProductsGrid.module.css';
 
 const ProductsGrid = ({ products = [] }) => {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
-      <Grid container spacing={3} alignItems="stretch">
-        {products.map((product) => {
-           return (
-            <Grid item xs={6} sm={3}>
+    <div className={styles.root}>
+      {products.length > 0 ?
+        <Grid container spacing={3} alignItems="stretch">
+          {products.map((product) => {
+            return (
+              <Grid key={`card-${product.product_code}`} item xs={6} sm={3}>
                 <ProductCard product={product} />
-            </Grid>
-          );
-        })}
-      </Grid>
+              </Grid>
+            );
+          })}
+        </Grid> :
+        <Grid item xs={12}>
+          <Paper className={styles.paper}>No results</Paper>
+        </Grid>
+      }
     </div>
   );
 };

@@ -1,0 +1,12 @@
+.option {
+    font-size: var(--font-size-medium);
+}
+
+.option > span {
+    margin-right: var(--spacing-small);
+    font-size: var(--font-size-large);
+}
+  
+.imageIcon {
+    padding-right: var(--spacing-medium);
+}

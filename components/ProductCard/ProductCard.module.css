@@ -1,0 +1,15 @@
+.root {
+    max-width: 340;
+    display: flex;
+    justify-content: center;
+    max-height: 300;
+}
+  
+.media {
+    text-align: center;
+  }
+
+.title {
+    height: 40;
+    margin-top: 20;
+}

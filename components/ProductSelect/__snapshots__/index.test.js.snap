@@ -4,20 +4,15 @@ exports[`ProductSelect matches snapshot 1`] = `
 <div
   aria-expanded={false}
   aria-owns={null}
-  className="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon"
+  className="MuiAutocomplete-root MuiAutocomplete-hasClearIcon"
   data-testid="product-select"
   onClick={[Function]}
   onKeyDown={[Function]}
   onMouseDown={[Function]}
   role="combobox"
-  style={
-    Object {
-      "width": "100%",
-    }
-  }
 >
   <div
-    className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+    className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
@@ -90,48 +85,13 @@ exports[`ProductSelect matches snapshot 1`] = `
             </svg>
           </span>
         </button>
-        <button
-          aria-label="Open"
-          className="MuiButtonBase-root MuiIconButton-root MuiAutocomplete-popupIndicator"
-          disabled={false}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={-1}
-          title="Open"
-          type="button"
-        >
-          <span
-            className="MuiIconButton-label"
-          >
-            <svg
-              aria-hidden={true}
-              className="MuiSvgIcon-root"
-              focusable="false"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M7 10l5 5 5-5z"
-              />
-            </svg>
-          </span>
-        </button>
       </div>
       <fieldset
         aria-hidden={true}
-        className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+        className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="PrivateNotchedOutline-legendLabelled-5"
+          className="PrivateNotchedOutline-legendLabelled-3"
         >
           <span>
             I'm looking for
